@@ -39,3 +39,14 @@ li.image {
 h1 {
   margin: 0;
 }
+
+.card {
+  border-radius: 25px;
+  background: #4b5555;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}

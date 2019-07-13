@@ -60,23 +60,27 @@ class App extends Component {
   render() {
     return (
       <div className={this.state.theme}>
-        <NavBar
-          score={this.state.score}
-          highestScore={this.state.highestScore}
-          theme={this.state.theme}
-          toggleTheme={this.state.toggleTheme}
-        />
+        <header>
+          <NavBar
+            score={this.state.score}
+            highestScore={this.state.highestScore}
+            theme={this.state.theme}
+            toggleTheme={this.state.toggleTheme}
+          />
+        </header>
 
-        <ImageList>
-          {this.state.card.map(data => (
-            <Images
-              handleClick={this.handleClick}
-              id={data.id}
-              image={data.image}
-              click={data.click}
-            />
-          ))}
-        </ImageList>
+        <div className="container">
+          <ImageList>
+            {this.state.card.map(data => (
+              <Images
+                handleClick={this.handleClick}
+                id={data.id}
+                image={data.image}
+                click={data.click}
+              />
+            ))}
+          </ImageList>
+        </div>
       </div>
     );
   }
